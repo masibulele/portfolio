@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="static\css\style.css">
+    <link rel="stylesheet" href="static\css\media_queries.css">
+</head>
+<body>
+    <!-- create Desktop nav bar -->
+    <nav id="desktop-nav">
+        <div class="logo">
+            Masi Madiba
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+    
+
+    </nav>
+    <!-- create hamburger nav bar -->
+    <nav id="hamburger-nav">
+        <div class="logo">
+            Masi Madiba
+        </div>
+        <div class="hamburger-menu" >
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contacts" onclick="toggleMenu()">Contacts</a></li>
+            </div>
+
+        </div>
+        
+
+    </nav>
+    <!-- create hero section of page -->
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="static/assets/Masi_smoke.png" alt="Masi Madiba">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Masi</h1>
+            <p class="section__text__p2"> A Python Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('static/assets/CV Masibulele Madiba 2023.pdf')">
+                    Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="window.location.href='#contacts'">
+                    contact Info
+                </button>
+            </div>
+            <div id="social_media-container">
+                <img src="static\assets\linkedin.png" alt="my linkedin profile" class="icon" onclick="window.location.href='https://www.linkedin.com/in/masibulele-madiba-10994670/'">
+                <img src="static\assets\github.png" alt="github" class="icon" onclick="window.location.href='https://github.com/masibulele'">
+            </div>
+
+        </div>
+  
+
+    </section>
+    <!-- create about section -->
+    <section id="about">
+        <p class="section__text__p1">Get to know more...</p>
+        <h1 class="title">About Me</h1>
+        <p class="section__text__p2"></p>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="static\assets\20190115_115117.jpg" 
+                alt="profile-pic"
+                class="about-pic"
+                >
+
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="static\assets\experience.png" 
+                        alt="experience icon"
+                        class="icon"
+                        >
+                        <h3>Experience</h3>
+                        <p>
+                            3+ years<br> Frontend & Python development.
+                        </p>
+                    </div>
+                    <div class="details-container">
+                        <img src="static\assets\education.png" 
+                        alt="education icon"
+                        class="icon"
+                        >
+                        <h3>Education</h3>
+                        <p>
+                            B.Acc Bachelors degree<br>  B.Acc(hons) Honours degree
+                        </p>
+                    </div>
+
+                </div>
+                <div class="text-details">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore unde quas ducimus aliquid beatae quo eveniet perspiciatis laudantium id nam ipsam, reprehenderit dolore illo, provident est ipsum assumenda debitis nostrum. Animi, voluptate repudiandae! Tenetur sit expedita dolores ex consequuntur exercitationem commodi? Distinctio in amet non quos porro sequi quae numquam.
+                </div>
+            </div>
+        </div>
+        <img src="static\assets\arrow.png" 
+        alt="arrow"
+        class="icon arrow"
+        onclick="location.href='#experience'"
+        >
+    </section>
+    <!-- create experience section -->
+    <section id="experience">
+        <p class="section__text__p1">Explore my</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Frontend development</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="static\assets\checkmark.png" 
+                            alt="checkmark"
+                            class="icon"
+                            >
+                            <div>
+                                <h3>
+                                    HTML
+                                </h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="static\assets\checkmark.png" 
+                            alt="checkmark"
+                            class="icon"
+                            >
+                            <div>
+                                <h3>
+                                    CSS
+                                </h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="static\assets\checkmark.png" 
+                            alt="checkmark"
+                            class="icon"
+                            >
+                            <div>
+                                <h3>
+                                    Bootstrap
+                                </h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="static\assets\checkmark.png" 
+                            alt="checkmark"
+                            class="icon"
+                            >
+                            <div>
+                                <h3>
+                                    Javascript
+                                </h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Backend development</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="static\assets\checkmark.png" 
+                            alt="checkmark"
+                            class="icon"
+                            >
+                            <div>
+                                <h3>
+                                    Python
+                                </h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="static\assets\checkmark.png" 
+                            alt="checkmark"
+                            class="icon"
+                            >
+                            <div>
+                                <h3>
+                                    SQL
+                                </h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="static\assets\checkmark.png" 
+                            alt="checkmark"
+                            class="icon"
+                            >
+                            <div>
+                                <h3>
+                                    Postgresql
+                                </h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="static\assets\checkmark.png" 
+                            alt="checkmark"
+                            class="icon"
+                            >
+                            <div>
+                                <h3>
+                                    C++
+                                </h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="static\assets\checkmark.png" 
+                            alt="checkmark"
+                            class="icon"
+                            >
+                            <div>
+                                <h3>
+                                    git
+                                </h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="static\assets\checkmark.png" 
+                            alt="checkmark"
+                            class="icon"
+                            >
+                            <div>
+                                <h3>
+                                    PHP
+                                </h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <img src="static\assets\arrow.png" 
+        alt="arrow"
+        class="icon arrow"
+        onclick="location.href='#projects'"
+        >
+    </section>
+    <!-- create projects section -->
+    <section id="projects">
+        <p class="section__text__p1">Browse my recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container color-container">
+                    <div class="article-container ">
+                        <img src="static\assets\project-1.png" 
+                        alt="project 1"
+                        class="project-img"
+                        >
+
+                    </div>
+                    <h2 class="experience-sub-title project-title">Project One</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" 
+                        onclick="Location.href=''">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" 
+                        onclick="Location.href=''">
+                            Live Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container ">
+                        <img src="static\assets\project-2.png" 
+                        alt="project 2"
+                        class="project-img"
+                        >
+
+                    </div>
+                    <h2 class="experience-sub-title project-title">Project Two</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" 
+                        onclick="Location.href=''">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" 
+                        onclick="Location.href=''">
+                            Live Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container ">
+                        <img src="static\assets\project-3.png" 
+                        alt="project 3"
+                        class="project-img"
+                        >
+
+                    </div>
+                    <h2 class="experience-sub-title project-title">Project Three</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" 
+                        onclick="Location.href=''">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" 
+                        onclick="Location.href=''">
+                            Live Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="static\assets\arrow.png" 
+        alt="arrow"
+        class="icon arrow"
+        onclick="location.href='#contacts'"
+        >
+    </section>
+    <!-- create contacts section -->
+    <section id="contacts">
+        <p class="section__text__p1">Get in touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="Contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="static\assets\email.png" 
+                alt="email icon"
+                class="icon contact-icon email-icon"
+                >
+                <p><a href="mailto:masibulele100@gmail.com">masibulele100@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="static/assets/linkedin.png" 
+                alt="linkedin icon"
+                class="icon contact-icon"
+                >
+                <p><a href="https://www.linkedin.com/in/masibulele-madiba-10994670/">Linkedin</a></p>
+            </div>
+
+        </div>
+    </section>
+    <!-- create footer -->
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+
+            </div>
+        </nav>
+        <p> copyright &#169 Masibulele Madiba</p>
+    </footer>
+    <script src="static\js\scripts.js"></script>
+</body>
+</html>
