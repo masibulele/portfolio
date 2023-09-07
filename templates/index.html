@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="static\css\style.css">
-    <link rel="stylesheet" href="static\css\media_queries.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/media_queries.css')}}">
 </head>
 <body>
     <!-- create Desktop nav bar -->
@@ -47,7 +47,7 @@
     <!-- create hero section of page -->
     <section id="profile">
         <div class="section__pic-container">
-            <img src="static/assets/Masi_smoke.png" alt="Masi Madiba">
+            <img src="{{url_for('static',filename='assets/Masi_smoke.png')}}" alt="Masi Madiba">
         </div>
         <div class="section__text">
             <p class="section__text__p1">Hello, I'm</p>
@@ -62,8 +62,8 @@
                 </button>
             </div>
             <div id="social_media-container">
-                <img src="static\assets\linkedin.png" alt="my linkedin profile" class="icon" onclick="window.location.href='https://www.linkedin.com/in/masibulele-madiba-10994670/'">
-                <img src="static\assets\github.png" alt="github" class="icon" onclick="window.location.href='https://github.com/masibulele'">
+                <img src="{{url_for('static',filename='assets/linkedin.png')}}" alt="my linkedin profile" class="icon" onclick="window.location.href='https://www.linkedin.com/in/masibulele-madiba-10994670/'">
+                <img src="{{url_for('static',filename='assets/github.png')}}" alt="github" class="icon" onclick="window.location.href='https://github.com/masibulele'">
             </div>
 
         </div>
@@ -77,7 +77,7 @@
         <p class="section__text__p2"></p>
         <div class="section-container">
             <div class="section__pic-container">
-                <img src="static\assets\20190115_115117.jpg" 
+                <img src="{{url_for('static',filename='assets/20190115_115117.jpg')}}" 
                 alt="profile-pic"
                 class="about-pic"
                 >
@@ -86,7 +86,7 @@
             <div class="about-details-container">
                 <div class="about-containers">
                     <div class="details-container">
-                        <img src="static\assets\experience.png" 
+                        <img src="{{url_for('static',filename='assets/experience.png')}}" 
                         alt="experience icon"
                         class="icon"
                         >
@@ -96,7 +96,7 @@
                         </p>
                     </div>
                     <div class="details-container">
-                        <img src="static\assets\education.png" 
+                        <img src="{{url_for('static',filename='assets/education.png')}}" 
                         alt="education icon"
                         class="icon"
                         >
@@ -108,11 +108,13 @@
 
                 </div>
                 <div class="text-details">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore unde quas ducimus aliquid beatae quo eveniet perspiciatis laudantium id nam ipsam, reprehenderit dolore illo, provident est ipsum assumenda debitis nostrum. Animi, voluptate repudiandae! Tenetur sit expedita dolores ex consequuntur exercitationem commodi? Distinctio in amet non quos porro sequi quae numquam.
+                    I am web developer, with experience in making beautiful and responsive websites. My skill set includes design, development and deployment of web applications.
+                    I am comfortable with working python to build customised automations, chatbots,desktop applications . i can work with large datasets to perform detail data analysis.
+                    i have experience developing applications with large language models(LLM) such as openAI.
                 </div>
             </div>
         </div>
-        <img src="static\assets\arrow.png" 
+        <img src="{{url_for('static',filename='assets/arrow.png')}}" 
         alt="arrow"
         class="icon arrow"
         onclick="location.href='#experience'"
@@ -128,7 +130,7 @@
                     <h2 class="experience-sub-title">Frontend development</h2>
                     <div class="article-container">
                         <article>
-                            <img src="static\assets\checkmark.png" 
+                            <img src="{{url_for('static',filename='assets/checkmark.png')}}" 
                             alt="checkmark"
                             class="icon"
                             >
@@ -140,7 +142,7 @@
                             </div>
                         </article>
                         <article>
-                            <img src="static\assets\checkmark.png" 
+                            <img src="{{url_for('static',filename='assets/checkmark.png')}}" 
                             alt="checkmark"
                             class="icon"
                             >
@@ -152,7 +154,7 @@
                             </div>
                         </article>
                         <article>
-                            <img src="static\assets\checkmark.png" 
+                            <img src="{{url_for('static',filename='assets/checkmark.png')}}" 
                             alt="checkmark"
                             class="icon"
                             >
@@ -164,7 +166,7 @@
                             </div>
                         </article>
                         <article>
-                            <img src="static\assets\checkmark.png" 
+                            <img src="{{url_for('static',filename='assets/checkmark.png')}}" 
                             alt="checkmark"
                             class="icon"
                             >
@@ -183,7 +185,7 @@
                     <h2 class="experience-sub-title">Backend development</h2>
                     <div class="article-container">
                         <article>
-                            <img src="static\assets\checkmark.png" 
+                            <img src="{{url_for('static',filename='assets/checkmark.png')}}" 
                             alt="checkmark"
                             class="icon"
                             >
@@ -195,7 +197,7 @@
                             </div>
                         </article>
                         <article>
-                            <img src="static\assets\checkmark.png" 
+                            <img src="{{url_for('static',filename='assets/checkmark.png')}}" 
                             alt="checkmark"
                             class="icon"
                             >
@@ -207,7 +209,7 @@
                             </div>
                         </article>
                         <article>
-                            <img src="static\assets\checkmark.png" 
+                            <img src="{{url_for('static',filename='assets/checkmark.png')}}" 
                             alt="checkmark"
                             class="icon"
                             >
@@ -219,7 +221,7 @@
                             </div>
                         </article>
                         <article>
-                            <img src="static\assets\checkmark.png" 
+                            <img src="{{url_for('static',filename='assets/checkmark.png')}}" 
                             alt="checkmark"
                             class="icon"
                             >
@@ -231,7 +233,7 @@
                             </div>
                         </article>
                         <article>
-                            <img src="static\assets\checkmark.png" 
+                            <img src="{{url_for('static',filename='assets/checkmark.png')}}" 
                             alt="checkmark"
                             class="icon"
                             >
@@ -243,7 +245,7 @@
                             </div>
                         </article>
                         <article>
-                            <img src="static\assets\checkmark.png" 
+                            <img src="{{url_for('static',filename='assets/checkmark.png')}}" 
                             alt="checkmark"
                             class="icon"
                             >
@@ -260,7 +262,7 @@
                 </div>
             </div>
         </div>
-        <img src="static\assets\arrow.png" 
+        <img src="{{url_for('static',filename='assets/arrow.png')}}" 
         alt="arrow"
         class="icon arrow"
         onclick="location.href='#projects'"
@@ -274,7 +276,7 @@
             <div class="about-containers">
                 <div class="details-container color-container">
                     <div class="article-container ">
-                        <img src="static\assets\project-1.png" 
+                        <img src="{{url_for('static',filename='assets/project-1.png')}}" 
                         alt="project 1"
                         class="project-img"
                         >
@@ -294,7 +296,7 @@
                 </div>
                 <div class="details-container color-container">
                     <div class="article-container ">
-                        <img src="static\assets\project-2.png" 
+                        <img src="{{url_for('static',filename='assets/project-2.png')}}" 
                         alt="project 2"
                         class="project-img"
                         >
@@ -314,7 +316,7 @@
                 </div>
                 <div class="details-container color-container">
                     <div class="article-container ">
-                        <img src="static\assets\project-3.png" 
+                        <img src="{{url_for('static',filename='assets/project-3.png')}}" 
                         alt="project 3"
                         class="project-img"
                         >
@@ -334,7 +336,7 @@
                 </div>
             </div>
         </div>
-        <img src="static\assets\arrow.png" 
+        <img src="{{url_for('static',filename='assets/arrow.png')}}" 
         alt="arrow"
         class="icon arrow"
         onclick="location.href='#contacts'"
@@ -346,14 +348,14 @@
         <h1 class="title">Contact Me</h1>
         <div class="Contact-info-upper-container">
             <div class="contact-info-container">
-                <img src="static\assets\email.png" 
+                <img src="{{url_for('static',filename='assets/email.png')}}" 
                 alt="email icon"
                 class="icon contact-icon email-icon"
                 >
                 <p><a href="mailto:masibulele100@gmail.com">masibulele100@gmail.com</a></p>
             </div>
             <div class="contact-info-container">
-                <img src="static/assets/linkedin.png" 
+                <img src="{{url_for('static',filename='assets/linkedin.png')}}" 
                 alt="linkedin icon"
                 class="icon contact-icon"
                 >
@@ -377,6 +379,6 @@
         </nav>
         <p> copyright &#169 Masibulele Madiba</p>
     </footer>
-    <script src="static\js\scripts.js"></script>
+    <script src="{{url_for('static',filename='js/scripts.js')}}"></script>
 </body>
 </html>
