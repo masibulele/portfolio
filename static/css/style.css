@@ -365,11 +365,33 @@ article .icon{
     background: rgb(255, 255, 255);
 }
 
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.project-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: auto;
+    gap: 0;
+}
+
+.project-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .project-img{
+    display: block;
     border-radius: 2rem;
-    width: 90%;
-    height: 90%;
-    
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
 }
 
 .project-title{
@@ -377,10 +399,19 @@ article .icon{
     color: black;
 }
 
+.project-links{
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
 .project-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: black;
     border-color: rgb(163,163,163);
-
+    box-sizing: border-box;
 }
 
 /* contacts */

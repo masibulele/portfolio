@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code by Masi</title>
+    <title>Masibulele Madiba | Web &amp; Python Developer</title>
+    <meta name="description" content="Explore the portfolio of Masibulele Madiba, a web and Python developer building responsive websites, web applications, and automation tools.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ site_url }}/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Masibulele Madiba | Web &amp; Python Developer">
+    <meta property="og:description" content="Explore the portfolio of Masibulele Madiba, a web and Python developer building responsive websites, web applications, and automation tools.">
+    <meta property="og:url" content="{{ site_url }}/">
+    <meta property="og:image" content="{{ social_image }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Masibulele Madiba | Web &amp; Python Developer">
+    <meta name="twitter:description" content="Explore the portfolio of Masibulele Madiba, a web and Python developer building responsive websites, web applications, and automation tools.">
+    <meta name="twitter:image" content="{{ social_image }}">
     <link rel="shortcut icon" href="{{url_for('static',filename='assets/Masi-Logo.png')}}" type="image/x-icon" sizes="32x32">
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='css/media_queries.css')}}">
@@ -323,70 +335,38 @@
         <p class="section__text__p1">Browse my recent</p>
         <h1 class="title">Projects</h1>
         <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container color-container">
-                    <div class="article-container ">
-                        <video controls autoplay class="project-img">
-                            <source src="{{url_for('static',filename='assets/mockup2.mp4')}}" type="video/mp4">
+            <div class="projects-grid">
+                {% for project in projects %}
+                <article class="details-container color-container project-card">
+                    <div class="project-media">
+                        {% if project.media_type == "video" %}
+                        <video controls class="project-img" aria-label="{{ project.alt }}">
+                            <source src="{{ url_for('static', filename='assets/' ~ project.media) }}" type="video/mp4">
+                            Your browser does not support the video element.
                         </video>
-                        <!-- <img src="{{url_for('static',filename='assets/to-do-3.png')}}" 
-                        alt="project 1"
-                        class="project-img"
-                        > -->
-
+                        {% else %}
+                        <img src="{{ url_for('static', filename='assets/' ~ project.media) }}"
+                             alt="{{ project.alt }}"
+                             class="project-img">
+                        {% endif %}
                     </div>
-                    <h2 class="experience-sub-title project-title">Gaming website</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="window.location.href='https://github.com/masibulele/stream_project'">
-                            Github
-                        </button>
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="window.location.href='https://gaming-hupu.onrender.com/'">
-                            Live Demo
-                        </button>
+                    <h2 class="experience-sub-title project-title">{{ project.title }}</h2>
+                    <div class="btn-container project-links">
+                        {% if project.github_url %}
+                        <a class="btn btn-color-2 project-btn"
+                           href="{{ project.github_url }}"
+                           target="_blank"
+                           rel="noopener noreferrer">GitHub</a>
+                        {% endif %}
+                        {% if project.demo_url %}
+                        <a class="btn btn-color-2 project-btn"
+                           href="{{ project.demo_url }}"
+                           target="_blank"
+                           rel="noopener noreferrer">Live Demo</a>
+                        {% endif %}
                     </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container ">
-                        <img src="{{url_for('static',filename='assets/mockup5.png')}}" 
-                        alt="project 2"
-                        class="project-img"
-                        >
-
-                    </div>
-                    <h2 class="experience-sub-title project-title">News website</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="window.location.href='https://github.com/masibulele/news_website'">
-                            Github
-                        </button>
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="window.location.href='https://tech-news-puce.vercel.app/'">
-                            Live Demo
-                        </button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container ">
-                        <img src="{{url_for('static',filename='assets/mockup6.png')}}" 
-                        alt="project 3"
-                        class="project-img"
-                        >
-
-                    </div>
-                    <h2 class="experience-sub-title project-title">infographic</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="window.Location.href='https://github.com/masibulele/results_component.git'">
-                            Github
-                        </button>
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="window.location.href='https://masibulele.github.io/results_component/'">
-                            Live Demo
-                        </button>
-                    </div>
-                </div>
+                </article>
+                {% endfor %}
             </div>
         </div>
         <img src="{{url_for('static',filename='assets/arrow.png')}}" 
