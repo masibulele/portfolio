@@ -4,7 +4,7 @@ from xml.sax.saxutils import escape
 from flask import Flask, Response, render_template, url_for
 from projects import PROJECTS
 
-app= Flask(__name__)
+app = Flask(__name__)
 
 
 def get_site_url():
@@ -39,5 +39,7 @@ def sitemap():
     )
     return Response(content, mimetype='application/xml')
 
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
