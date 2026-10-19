@@ -67,7 +67,7 @@
             <h1 class="title">Masi</h1>
             <p class="section__text__p2"> A Web & Python Developer</p>
             <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('static/assets/CV Masibulele Madiba 2023.pdf')">
+                <button class="btn btn-color-2" onclick="window.open('{{ url_for('static', filename='assets/CV Masibulele Madiba 2023.pdf') }}')">
                     Download CV
                 </button>
                 <button class="btn btn-color-1" onclick="window.location.href='#contacts'">

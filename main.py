@@ -3,8 +3,10 @@ from xml.sax.saxutils import escape
 
 from flask import Flask, Response, render_template, url_for
 from projects import PROJECTS
+# main file
 
-app = Flask(__name__)
+
+app = Flask(__name__, static_folder="public/static")
 
 
 def get_site_url():
