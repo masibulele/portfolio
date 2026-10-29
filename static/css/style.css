@@ -358,6 +358,15 @@ article .icon{
 /* projects section */
 #projects{
     position: relative;
+    height: auto;
+}
+
+#projects .about-containers{
+    flex-wrap: wrap;
+}
+
+#projects .details-container{
+    flex: 1 1 15rem;
 }
 
 .color-container{
