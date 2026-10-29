@@ -18,6 +18,12 @@
     <link rel="shortcut icon" href="{{url_for('static',filename='assets/Masi-Logo.png')}}" type="image/x-icon" sizes="32x32">
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='css/media_queries.css')}}">
+    <script>
+        const savedTheme = localStorage.getItem("portfolio-theme");
+        document.documentElement.dataset.theme = ["light", "dark"].includes(savedTheme)
+            ? savedTheme
+            : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -53,30 +59,37 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contacts">Contacts</a></li>
         </ul>
-    
-
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">
+            <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+            <span class="theme-toggle-label">Dark mode</span>
+        </button>
     </nav>
     <!-- create hamburger nav bar -->
     <nav id="hamburger-nav">
         <div class="logo">
             Masi Madiba
         </div>
-        <div class="hamburger-menu" >
-            <div class="hamburger-icon" onclick="toggleMenu()">
+        <div class="mobile-nav-actions">
+            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">
+                <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+                <span class="theme-toggle-label">Dark mode</span>
+            </button>
+            <div class="hamburger-menu">
+            <button class="hamburger-icon" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
+            </button>
+            <div class="menu-links" id="mobile-menu">
+                <ul>
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contacts" onclick="toggleMenu()">Contacts</a></li>
+                </ul>
             </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contacts" onclick="toggleMenu()">Contacts</a></li>
             </div>
-
         </div>
-        
-
     </nav>
     <main>
     <!-- create hero section of page -->
@@ -87,14 +100,12 @@
         <div class="section__text">
             <p class="section__text__p1">Hello, I'm</p>
             <h1 class="title">Masibulele Madiba</h1>
-            <p class="section__text__p2"> A Web & Python Developer</p>
+            <p class="section__text__p2">Web &amp; Python Developer</p>
             <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('static/assets/CV Masibulele Madiba 2023.pdf')">
+                <a class="btn btn-color-2" href="{{ url_for('static', filename='assets/CV Masibulele Madiba 2023.pdf') }}" target="_blank" rel="noopener">
                     Download CV
-                </button>
-                <button class="btn btn-color-1" onclick="window.location.href='#contacts'">
-                    contact Info
-                </button>
+                </a>
+                <a class="btn btn-color-1" href="#contacts">Contact me</a>
             </div>
             <div id="social_media-container">
                 <a href="https://www.linkedin.com/in/masibulele-madiba-10994670/" aria-label="LinkedIn profile">
@@ -113,7 +124,6 @@
     <section id="about">
         <p class="section__text__p1">Get to know more...</p>
         <h2 class="title">About Me</h2>
-        <p class="section__text__p2"></p>
         <div class="section-container">
             <div class="section__pic-container">
                 <img src="{{url_for('static',filename='assets/20190115_115117.jpg')}}" 
@@ -147,17 +157,13 @@
 
                 </div>
                 <div class="text-details">
-                    I am web developer, with experience in making beautiful and responsive websites. My skill set includes design, development and deployment of web applications.
-                    I am comfortable working with python to build customised automations, chatbots,desktop applications . i can work with large datasets to perform detail data analysis.
-                    i have experience developing applications with large language models(LLM) such as openAI.
+                    I am a web developer with experience creating responsive websites and web applications, from design and development through to deployment. I also build Python automations, chatbots, and desktop applications, and work with data analysis and large language model applications.
                 </div>
             </div>
         </div>
-        <img src="{{url_for('static',filename='assets/arrow.png')}}" 
-        alt="arrow"
-        class="icon arrow"
-        onclick="location.href='#experience'"
-        >
+        <a class="section-arrow" href="#experience" aria-label="Continue to experience">
+            <img src="{{url_for('static',filename='assets/arrow.png')}}" alt="">
+        </a>
     </section>
     <!-- create experience section -->
     <section id="experience">
@@ -228,19 +234,6 @@
                                 <p>Intermediate</p>
                             </div>
                         </article>
-                        <article>
-                            <!-- <img src="{{url_for('static',filename='assets/checkmark.png')}}" 
-                            alt="checkmark"
-                            class="icon"
-                            > -->
-                            <div>
-                                <h3>
-                                    
-                                </h3>
-                                <p></p>
-                            </div>
-                        </article>
-
                     </div>
 
                 </div>
@@ -331,30 +324,14 @@
                                 <p>Intermediate</p>
                             </div>
                         </article>
-                        <article>
-                            <!-- <img src="{{url_for('static',filename='assets/checkmark.png')}}" 
-                            alt="checkmark"
-                            class="icon"
-                            > -->
-                            <div>
-                                <h3>
-                                    
-                                </h3>
-                                <p></p>
-                            </div>
-                        </article>
-                        
-
                     </div>
 
                 </div>
             </div>
         </div>
-        <img src="{{url_for('static',filename='assets/arrow.png')}}" 
-        alt="arrow"
-        class="icon arrow"
-        onclick="location.href='#projects'"
-        >
+        <a class="section-arrow" href="#projects" aria-label="Continue to projects">
+            <img src="{{url_for('static',filename='assets/arrow.png')}}" alt="">
+        </a>
     </section>
     <!-- create projects section -->
     <section id="projects">
@@ -366,7 +343,7 @@
                 <div class="details-container color-container">
                     <div class="article-container">
                         {% if project.is_video %}
-                        <video controls autoplay class="project-img">
+                        <video controls preload="metadata" playsinline class="project-img" aria-label="{{ project.title }} preview">
                             <source src="{{ url_for('static', filename='assets/' ~ project.image) }}" type="video/mp4">
                         </video>
                         {% else %}
@@ -378,12 +355,12 @@
                     <h2 class="experience-sub-title project-title">{{ project.title }}</h2>
                     <div class="btn-container">
                         {% if project.github_url %}
-                        <a class="btn btn-color-2 project-btn" href="{{ project.github_url }}">
+                        <a class="btn btn-color-2 project-btn" href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer">
                             Github
                         </a>
                         {% endif %}
                         {% if project.demo_url %}
-                        <a class="btn btn-color-2 project-btn" href="{{ project.demo_url }}">
+                        <a class="btn btn-color-2 project-btn" href="{{ project.demo_url }}" target="_blank" rel="noopener noreferrer">
                             Live Demo
                         </a>
                         {% endif %}
@@ -392,11 +369,9 @@
                 {% endfor %}
             </div>
         </div>
-        <img src="{{url_for('static',filename='assets/arrow.png')}}" 
-        alt="arrow"
-        class="icon arrow"
-        onclick="location.href='#contacts'"
-        >
+        <a class="section-arrow" href="#contacts" aria-label="Continue to contact information">
+            <img src="{{url_for('static',filename='assets/arrow.png')}}" alt="">
+        </a>
     </section>
     <!-- create contacts section -->
     <section id="contacts">

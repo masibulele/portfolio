@@ -1,112 +1,122 @@
-@media screen  and (max-width:1200px){
+@media (min-width: 42rem) {
+    nav {
+        min-height: 5rem;
+    }
 
- #profile{
-    height: 83vh;
-    margin-bottom: 6rem;
- }
- .about-containers{
-    flex-wrap: wrap;
- }
- 
-}
-
-
-
-
-
-
-@media screen  and (max-width:1000px){
-
-    #desktop-nav{
+    #hamburger-nav {
         display: none;
     }
 
-    #hamburger-nav{
+    #desktop-nav {
         display: flex;
-    }
-    #experience,.experience-details-container{
-        margin-top: 2rem;
-    }
-    #profile, .section-container{
-        display: block;
-
-    }
-    .arrow{
-        display: none;
+        gap: 1.5rem;
     }
 
-    section, .section-container{
-        height: fit-content;
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: clamp(0.75rem, 2vw, 1.75rem);
     }
 
-    section{
-        margin: 0 5%;
+    #desktop-nav .nav-links a {
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-weight: 600;
     }
-    .section__pic-container{
-        width: 275px;
-        height: 275px;
-        margin: 0 auto 2rem;
+
+    #desktop-nav .nav-links a:hover {
+        color: var(--accent);
     }
-    .about-containers{
-        margin-top: 0;
+
+    section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    #profile {
+        min-height: min(48rem, calc(100svh - 5rem));
+        flex-direction: row;
+        gap: clamp(2rem, 6vw, 5rem);
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        text-align: left;
+    }
+
+    #profile .section__text__p1 {
+        text-align: left;
+    }
+
+    #profile .btn-container,
+    #social_media-container {
+        justify-content: flex-start;
+    }
+
+    #profile .title {
+        font-size: clamp(3rem, 6vw, 4.5rem);
+    }
+
+    .section-container {
+        grid-template-columns: minmax(14rem, 0.8fr) minmax(0, 1.2fr);
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #about .section__pic-container {
+        width: 100%;
+    }
+
+    .about-containers {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #experience .about-containers {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #projects .about-containers {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    }
+
+    .Contact-info-upper-container {
+        display: flex;
+        gap: 1.5rem;
+        padding: 0.75rem 1.25rem;
     }
 }
 
-
-@media screen  and (max-width:600px){
-
-    #contacts, footer{
-        height: 40vh;
-    }
-    #profile{
-        height: 83vh;
-        margin-bottom: 0;
-    }
-    article{
-        font-size: 1rem;
-    }
-    footer nav{
-        height:fit-content;
-        margin-bottom: 2rem;
+@media (min-width: 68rem) {
+    #profile .section__pic-container {
+        width: 21rem;
     }
 
-    .about-containers,
-    .Contact-info-upper-container,
-     .btn-container{
-        flex-wrap: wrap;
-     }
+    #projects .about-containers {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
 
-     .Contact-info-container{
-        margin: 0 0 0.5rem 0;
-     }
-     .Contact-info-container p, .nav-links li a{
-        font-size: 1rem;
+@media (max-width: 25rem) {
+    nav {
+        width: calc(100% - 1.25rem);
+    }
 
-     }
-     .experience-sub-title{
-        font-size: 1.25rem;
-     }
-     .logo{
-        font-size: 1.5rem;
-        
-     }
-     .nav-links{
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
-     }
-     .section__pic-container{
-        width: auto;
-        height: 46vw;
-        justify-content: center;
-     }
-     .section__text__p2{
-        font-size: 1.25rem;
-     }
-     .title{
-        font-size: 2rem;
-     }
-     .text-details{
-        text-align: justify;
-     }
+    .theme-toggle {
+        width: 2.65rem;
+        padding: 0;
+    }
+
+    .theme-toggle-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    section, #projects {
+        width: calc(100% - 1.5rem);
+    }
 }
