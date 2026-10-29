@@ -24,15 +24,29 @@ PROJECTS = [
         "demo_url": "https://masibulele.github.io/results_component/",
     },
     {
-        "title": "infographic",
-        "image": "mockup6.png",
-        "github_url": "https://github.com/masibulele/results_component.git",
-        "demo_url": "https://masibulele.github.io/results_component/",
+        "title": "Quiz Game",
+        "image": "quiz-game.png",
+        "github_url": "https://github.com/masibulele/quiz_game.git",
+        "demo_url": "https://masibulele.github.io/quiz_game/",
     },
-    
+    {
+        "title": "Kanban Board",
+        "image": "kanban-board.png",
+        "github_url": "https://github.com/masibulele/kanban_board.git",
+        "demo_url": "https://masibulele.github.io/kanban_board/",
+    },
+    {
+        "title": "Expense Tracker",
+        "image": "frontend-expense-tracker.png",
+        "github_url": "https://github.com/masibulele/frontend_expense_tracker.git",
+        "demo_url": "https://masibulele.github.io/frontend_expense_tracker/",
+    },
+
+
 
     
 ]
+PROJECTS= PROJECTS[::-1]
 
 
 
