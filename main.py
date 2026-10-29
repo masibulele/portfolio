@@ -23,6 +23,15 @@ PROJECTS = [
         "github_url": "https://github.com/masibulele/results_component.git",
         "demo_url": "https://masibulele.github.io/results_component/",
     },
+    {
+        "title": "infographic",
+        "image": "mockup6.png",
+        "github_url": "https://github.com/masibulele/results_component.git",
+        "demo_url": "https://masibulele.github.io/results_component/",
+    },
+    
+
+    
 ]
 
 
