@@ -3,10 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code by Masi</title>
+    <meta name="description" content="Portfolio of Masibulele Madiba, a web and Python developer building responsive websites, web applications, automation tools, and data-driven projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Masibulele Madiba | Web &amp; Python Developer">
+    <meta property="og:description" content="Explore the web development, Python, automation, and data projects of Masibulele Madiba.">
+    <meta property="og:url" content="{{ url_for('home', _external=True) }}">
+    <meta property="og:image" content="{{ url_for('static', filename='assets/Masi_smoke.png', _external=True) }}">
+    <meta property="og:image:alt" content="Masibulele Madiba, web and Python developer">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Masibulele Madiba | Web &amp; Python Developer">
+    <meta name="twitter:description" content="Explore the web development, Python, automation, and data projects of Masibulele Madiba.">
+    <meta name="twitter:image" content="{{ url_for('static', filename='assets/Masi_smoke.png', _external=True) }}">
+    <title>Masibulele Madiba | Web &amp; Python Developer</title>
     <link rel="shortcut icon" href="{{url_for('static',filename='assets/Masi-Logo.png')}}" type="image/x-icon" sizes="32x32">
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='css/media_queries.css')}}">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Masibulele Madiba",
+            "jobTitle": "Web and Python Developer",
+            "url": {{ url_for('home', _external=True) | tojson }},
+            "image": {{ url_for('static', filename='assets/Masi_smoke.png', _external=True) | tojson }},
+            "email": "masibulele100@gmail.com",
+            "sameAs": [
+                "https://github.com/masibulele",
+                "https://www.linkedin.com/in/masibulele-madiba-10994670/"
+            ],
+            "knowsAbout": [
+                "Web development",
+                "Python development",
+                "Automation",
+                "Data analysis",
+                "Large language model applications"
+            ]
+        }
+    </script>
 </head>
 <body>
     <!-- create Desktop nav bar -->
@@ -45,6 +78,7 @@
         
 
     </nav>
+    <main>
     <!-- create hero section of page -->
     <section id="profile">
         <div class="section__pic-container">
@@ -52,7 +86,7 @@
         </div>
         <div class="section__text">
             <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Masi</h1>
+            <h1 class="title">Masibulele Madiba</h1>
             <p class="section__text__p2"> A Web & Python Developer</p>
             <div class="btn-container">
                 <button class="btn btn-color-2" onclick="window.open('static/assets/CV Masibulele Madiba 2023.pdf')">
@@ -63,8 +97,12 @@
                 </button>
             </div>
             <div id="social_media-container">
-                <img src="{{url_for('static',filename='assets/linkedin.png')}}" alt="my linkedin profile" class="icon" onclick="window.location.href='https://www.linkedin.com/in/masibulele-madiba-10994670/'">
-                <img src="{{url_for('static',filename='assets/github.png')}}" alt="github" class="icon" onclick="window.location.href='https://github.com/masibulele'">
+                <a href="https://www.linkedin.com/in/masibulele-madiba-10994670/" aria-label="LinkedIn profile">
+                    <img src="{{url_for('static',filename='assets/linkedin.png')}}" alt="" class="icon">
+                </a>
+                <a href="https://github.com/masibulele" aria-label="GitHub profile">
+                    <img src="{{url_for('static',filename='assets/github.png')}}" alt="" class="icon">
+                </a>
             </div>
 
         </div>
@@ -74,7 +112,7 @@
     <!-- create about section -->
     <section id="about">
         <p class="section__text__p1">Get to know more...</p>
-        <h1 class="title">About Me</h1>
+        <h2 class="title">About Me</h2>
         <p class="section__text__p2"></p>
         <div class="section-container">
             <div class="section__pic-container">
@@ -124,7 +162,7 @@
     <!-- create experience section -->
     <section id="experience">
         <p class="section__text__p1">Explore my</p>
-        <h1 class="title">Experience</h1>
+        <h2 class="title">Experience</h2>
         <div class="experience-details-container">
             <div class="about-containers">
                 <div class="details-container">
@@ -321,7 +359,7 @@
     <!-- create projects section -->
     <section id="projects">
         <p class="section__text__p1">Browse my recent</p>
-        <h1 class="title">Projects</h1>
+        <h2 class="title">Projects</h2>
         <div class="experience-details-container">
             <div class="about-containers">
                 {% for project in projects %}
@@ -363,7 +401,7 @@
     <!-- create contacts section -->
     <section id="contacts">
         <p class="section__text__p1">Get in touch</p>
-        <h1 class="title">Contact Me</h1>
+        <h2 class="title">Contact Me</h2>
         <div class="Contact-info-upper-container">
             <div class="contact-info-container">
                 <img src="{{url_for('static',filename='assets/email.png')}}" 
@@ -382,6 +420,7 @@
 
         </div>
     </section>
+    </main>
     <!-- create footer -->
     <footer>
         <nav>
