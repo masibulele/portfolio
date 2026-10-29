@@ -646,8 +646,16 @@ footer p {
     filter: invert(1);
 }
 
+:root[data-theme="dark"] .icon {
+    filter: invert(1);
+}
+
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) .section-arrow img {
+        filter: invert(1);
+    }
+
+    :root:not([data-theme="light"]) .icon {
         filter: invert(1);
     }
 }
